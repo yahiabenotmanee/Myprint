@@ -69,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
                         .show();
             }
         });
+        BiometricPrompt.PromptInfo.Builder promptInfo = dialogMetric();
+        promptInfo.setDeviceCredentialAllowed(true);
+        biometricPrompt.authenticate(promptInfo.build());
+/*
         buttonfp.setOnClickListener(view -> {
             BiometricPrompt.PromptInfo.Builder promptInfo = dialogMetric();
             promptInfo.setNegativeButtonText("Cancel");
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             BiometricPrompt.PromptInfo.Builder promptInfo = dialogMetric();
             promptInfo.setDeviceCredentialAllowed(true);
             biometricPrompt.authenticate(promptInfo.build());
-        });
+        });*/
     }
     BiometricPrompt.PromptInfo.Builder dialogMetric()
     {
